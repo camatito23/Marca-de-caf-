@@ -1,0 +1,537 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #e6dbcd;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #80451f; /* Marrón oscuro */
+    color: #ffffff;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+header nav .logo img {
+    margin-right: 0.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    color: #dadada;
+}
+
+.homepagelink{
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Sección Nuestros Granos */
+.granos-section {
+    padding: 2em;
+    text-align: center;
+    color: #80451f;
+}
+
+.granos-section h1 {
+    font-size: 3em; /* Título principal más grande */
+    margin-bottom: 0.2em;
+    color: #000000;
+}
+
+.granos-section h2 {
+    font-size: 2em; /* Subtítulo más grande */
+    font-weight: normal;
+    color: #000000;
+    margin-top: 0.3em;
+}
+
+.granos-section p {
+    font-size: 1.3em; /* Texto introductorio más grande */
+    color: #000000;
+    margin-bottom: 2em;
+}
+
+/* Grid para Granos */
+.granos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    width: 100%;
+    padding: 2em;
+    position: relative; /* Necesario para la capa de color */
+    background-size: cover; /* Escala la imagen para cubrir toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Capa semitransparente sobre la textura */
+.granos-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff; /* Capa blanca semitransparente */
+    z-index: 1;
+}
+
+/* Ajustes de los elementos internos */
+.grano-item {
+    position: relative;
+    text-align: left;
+    border-top: 2px solid #dadada;
+    padding: 1em;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Asegura que el contenido esté sobre la capa de color */
+}
+
+/* Estilo para el encabezado con bandera y nombre del país */
+.grano-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.bandera {
+    width: 30px; /* Tamaño de la bandera */
+    height: auto;
+}
+
+.grano-item h3 {
+    font-size: 1.8em; /* Título de cada grano más grande */
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 0.5em;
+}
+
+.grano-item p {
+    font-size: 1.2em; /* Texto de descripción más grande */
+    color: #4a4a4a;
+    line-height: 1.5em;
+}
+
+.nosotros{
+    display: inline;
+    float: left;
+    position: relative;
+    bottom: -100px;
+    right: -60px;
+    font-size: large;
+}
+
+.textohome{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    position: relative;
+    float: left;
+    left: -150px;
+    top: 170px;
+    font-size: x-large;
+}
+
+@media (orientation: portrait){
+    .textohome{
+        max-width: 100%;;
+        text-align: center;
+        position: relative;
+        right: 100px;
+        font-size: xx-large;
+        display: block;
+        margin-left: 200px;
+    }
+}
+
+
+   
+
+
+.cajahome{
+    border: #000000;
+    border-style: solid;
+    width: 70%;
+    height: 600px;
+    display: block;
+    position: relative;
+    top: 200px;
+    left: 300px;
+}
+
+@media (orientation: portrait){
+    .cajahome{
+        max-width: fit-content;;
+    }
+}
+
+.imghome{
+    width:90%;
+    height: 100%;
+}
+
+@media (orientation: portrait){
+    .imghome{
+        display: none;
+    }
+}
+
+.figurehome{
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: right;
+    bottom: 222px;
+    left: 75px;
+}
+
+@media (orientation: portrait){
+    .figurehome{
+        display: none;
+    }
+}
+
+.homeh1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    display: block;
+    right:-45%;
+    font-size: xx-large;
+    bottom: -80px;
+}
+
+.boton{
+    max-width: 50%;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: auto;
+    display: block;
+    position: relative;
+    top: 500px;
+    right: -150px;
+}
+@media (orientation: portrait){
+    .boton{
+        
+        position: relative;
+        top: 650px;
+        right: -250px;
+    }
+}
+
+
+.boton1{
+    position: relative;
+    top: -215px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #80451f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 50px;
+
+}
+
+
+
+.boton3{
+    position: relative;
+    top: -175px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #80451f;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;;
+    top: -215px;
+}
+
+.pedidosH1{
+    display: block;
+    font-size: xx-large;
+    position: relative;
+    margin: 100px;
+}
+
+.botonpedido{
+    display: block;
+    border-style: solid;
+    width: 25%;
+    height: 200px;
+    position: relative;
+    margin: 100px;
+    align-content: center;
+    bottom: -100px;
+    right: -200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #80451f;
+    font-size: x-large;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+
+}
+.botonpedido2{
+    display: block;
+    border-style: solid;
+    width: 25%;
+    height: 200px;
+    position: relative;
+    float: right;
+    margin: 100px;
+    align-content: center;
+    top: -300px;
+    left: -200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    background-color: #80451f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+
+.botonretiro{
+    color: #ffffff;
+    position: relative;
+    right: -115px;
+}
+
+.botonenvio1{
+    color: #ffffff;
+    position: relative;
+    left: 115px;
+}
+
+
+.container {
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: -100px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu-item {
+    margin: 20px 0;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #80451f;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    
+}
+
+.botonmenu{
+    color: #ffffff;
+    position: relative;
+    right: -50px;
+
+}
+
+.granos{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    display: inline;
+    position: relative;
+    bottom: -100px;
+    right: -100px;
+}
+
+.cafe{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    display: inline;
+    position: relative;
+    float: right;
+    top: -170px;
+    left: -150px;
+}
+
+
+.h1envio{
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+
+}
+
+.subenvio{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: medium;
+}
+
+.formulario{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #80451f;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    width: 1000px;
+    right: -450px;
+}
+
+.button2{
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    background-color: #ffffff;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    right: -370px;
+}
+
+.botonenvio2{
+    color:#80451f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    left: -5px;
+}
+
+.footer {
+    color: #000000; /* Texto en blanco para visibilidad */
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+    top: 200px;
+    left: 650px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Enlaces de políticas y contacto */
+.footer-links {
+    display: flex;
+    gap: 1em;
+    margin: 0.5em 0;
+}
+
+.footer-link {
+    color: #000000; /* Texto blanco */
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-link:hover {
+    color: #000000;
+}
+
+/* Iconos de Redes Sociales */
+.footer-social {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: #000000; /* Blanco para visibilidad */
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.social-link:hover {
+    color: #000000;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.footer1 {
+    color: #000000; /* Texto en blanco para visibilidad */
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+    top: 200px;
+}
+
+.footer2 {
+    color: #000000; /* Texto en blanco para visibilidad */
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    left: 350px;
+}

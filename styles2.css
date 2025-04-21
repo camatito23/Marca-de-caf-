@@ -1,0 +1,317 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #e6dbcd;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #80451f; /* Marrón oscuro */
+    color: #ffffff;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+header nav .logo img {
+    margin-right: 0.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    color: #dadada;
+}
+
+/* Sección Intensidad */
+.intensidad-section {
+    padding: 2em;
+    text-align: center;
+    color: #80451f;
+}
+
+.intensidad-section h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #80451f;
+    font-weight: bold;
+}
+
+.intensidad-section h2 {
+    font-size: 2em;
+    font-weight: normal;
+    color: #4a4a4a;
+    margin-top: 0.3em;
+}
+
+.intensidad-section p {
+    font-size: 1.3em;
+    color: #4a4a4a;
+    margin-bottom: 2em;
+}
+
+/* Grid para Niveles de Intensidad */
+.intensidad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    width: 100%;
+    padding: 2em;
+    max-width: 1200px; /* Limita el ancho total de la cuadrícula para que los cuadros se vean más grandes */
+    margin: 0 auto; /* Centra la cuadrícula en la pantalla */
+}
+
+.intensidad-item {
+    border: 2px solid #dadada;
+    padding: 2em; /* Aumenta el espacio interno */
+    border-radius: 8px;
+    background-color: #ffffff;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intensidad-item h3 {
+    font-size: 1.4em; /* Aumenta el tamaño del título */
+    color: #4a4a4a;
+}
+
+.nivel {
+    font-size: 3em;
+    font-weight: bold;
+    color: #80451f;
+    margin: 0.5em 0;
+}
+
+.paises {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.pais {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.bandera {
+    width: 32px;
+    height: auto;
+}
+
+.pais-nombre {
+    color: #4a4a4a; /* Marrón oscuro para el nombre del país */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.intensidad-item p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    margin: 1em 0;
+}
+
+/* Estilo para los botones "Ver Precios" y "Ver Orígenes" */
+.botones {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.btn-accion {
+    padding: 0.5em 1.5em;
+    background-color: #80451f;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-accion:hover {
+    background-color: #663a17; /* Marrón más oscuro al pasar el cursor */
+}
+
+/* Ajuste del color del texto para que se vea sobre el fondo */
+.reservas-section, .granos-section, header nav, .mensaje-confirmacion {
+    color: #ffffff; /* Cambia el color del texto a blanco para que sea visible *//* Añadir relleno en la última sección antes del pie de página */
+}
+
+
+/* Estilo del pie de página */
+/* Pie de página fijado al final de la ventana */
+.footer {
+    color: #000000; /* Texto en blanco */
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Enlaces de políticas y contacto */
+.footer-links {
+    display: flex;
+    gap: 1em;
+    margin: 0.5em 0;
+}
+
+.footer-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-link:hover {
+    color: #000000; /* Color más claro al pasar el cursor */
+}
+
+/* Iconos de Redes Sociales */
+.footer-social {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+    align-items: center;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.social-link:hover {
+    color: #000000;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Estilos para la sección de comentarios en ancho completo */
+.comentarios-section {
+    background-color: #ffffff;
+    padding: 2em;
+    width: 100%; /* Ocupa todo el ancho */
+    box-shadow: none; /* Elimina la sombra */
+    border-radius: 0; /* Sin esquinas redondeadas */
+    text-align: left; /* Alineación del texto */
+}
+
+.comentarios-section h2 {
+    color: #80451f; /* Título en marrón oscuro */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.comentario {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 1em;
+    padding-left: 2em; /* Opcional: agrega espacio al texto */
+    padding-right: 2em; /* Opcional: agrega espacio al texto */
+}
+
+.comentario h4 {
+    color: #4a4a4a; /* Nombre en gris oscuro */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.comentario p {
+    color: #4a4a4a; /* Texto en gris oscuro */
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.homepagelink{
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.botonorigen{
+    position: relative;
+    top: 240px;
+    left: 350px;
+}
+
+
+
+.boton2{
+    position: relative;
+    top: -215px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #80451f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 50px;
+
+}
+
+
+
+.boton4{
+    position: relative;
+    top: -175px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #80451f;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;;
+    top: -215px;
+}

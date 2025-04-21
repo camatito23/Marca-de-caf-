@@ -1,0 +1,256 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #e6dbcd;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #80451f; /* Marrón oscuro */
+    color: #ffffff;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+header nav .logo img {
+    margin-right: 0.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li a {
+    color: #ffffff; /* Letras en blanco */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    color: #dadada;
+}
+
+/* Sección de Reservas */
+.reservas-section {
+    padding: 2em;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.reservas-section h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/* Grid de Reservas */
+.reservas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 1.5em;
+}
+
+.reserva-item {
+    border: 2px solid #dadada;
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.reserva-item h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #ffffff;
+}
+
+/* Estilos de inputs para Fecha, Hora y Personas */
+.input-fecha,
+.input-hora,
+.input-personas {
+    border: 1px solid #000000;
+    padding: 0.5em;
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Estilo del campo de email y el botón de confirmación */
+.reserva-confirmacion {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.input-email {
+    border: 1px solid #000000;
+    padding: 0.5em;
+    font-size: 1em;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.btn-confirmar {
+    padding: 0.6em 1.2em;
+    background-color: #80451f; /* Marrón oscuro */
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #663a17; /* Marrón más oscuro al pasar el cursor */
+}
+
+/* Barra de mensaje de confirmación */
+.mensaje-confirmacion {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffffff; /* Texto en blanco */
+    text-align: center;
+    background-color: #80451f; /* Fondo marrón oscuro */
+    padding: 1em;
+    border: 2px solid #80451f; /* Borde marrón oscuro */
+    border-radius: 5px;
+}
+/* Estilo del body con imagen de fondo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-image: url('images/cafeteria.avif'); /* Imagen de fondo para toda la página */
+    background-size: auto; /* Mantiene el tamaño original para evitar distorsión */
+    background-position: center top; /* Centra la imagen en la parte superior */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Si deseas superposición, puedes usar un valor de opacidad muy bajo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Opacidad muy baja para hacer visible la imagen */
+    z-index: -1; /* Coloca la capa detrás del contenido */
+}
+
+/* Ajuste del color del texto para que se vea sobre el fondo */
+.reservas-section, .granos-section, header nav, .mensaje-confirmacion {
+    color: #ffffff; /* Cambia el color del texto a blanco para que sea visible *//* Añadir relleno en la última sección antes del pie de página */
+}
+
+
+/* Estilo del pie de página */
+/* Pie de página fijado al final de la ventana */
+.footer {
+    color: #ffffff; /* Texto en blanco */
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Enlaces de políticas y contacto */
+.footer-links {
+    display: flex;
+    gap: 1em;
+    margin: 0.5em 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-link:hover {
+    color: #dadada; /* Color más claro al pasar el cursor */
+}
+
+/* Iconos de Redes Sociales */
+.footer-social {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+    align-items: center;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.social-link:hover {
+    color: #dadada;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Ajuste para colocar el pie de página sobre la imagen de fondo sin fondo propio */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-image: url('images/cafeteria.avif'); /* Imagen de fondo para toda la página */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    background-repeat: no-repeat;
+}
+
+.homepagelink{
+    color: #ffffff;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

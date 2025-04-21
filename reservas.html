@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierra de Granos - Reservas</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Tierra de Granos Logo" width="40">
+                <a class="homepagelink" href="homepage.html">Tierra de Granos</a></li>
+            </div>
+            <ul>
+                <li><a href="nuestrosgranos.html">Nuestros Granos</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="menu.html">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Reservas -->
+    <section id="reservas" class="reservas-section">
+        <h1>Reservas</h1>
+        
+        <div class="reservas-grid">
+            <!-- Fecha -->
+            <div class="reserva-item">
+                <h2>Fecha</h2>
+                <input type="date" class="input-fecha" id="fecha" min="2024-11-10">
+            </div>
+
+            <!-- Hora -->
+            <div class="reserva-item">
+                <h2>Hora</h2>
+                <input type="time" class="input-hora" id="hora">
+            </div>
+
+            <!-- Cantidad de Personas -->
+            <div class="reserva-item">
+                <h2>Cantidad de Personas</h2>
+                <select class="input-personas" id="personas">
+                    <option value="">Seleccione...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Campo de Email y Botón de Confirmación -->
+        <div class="reserva-confirmacion">
+            <input type="email" placeholder="Ingrese su email" class="input-email" id="email">
+            <button class="btn-confirmar" onclick="confirmarReserva()">Confirmar reserva</button>
+        </div>
+
+        <!-- Mensaje de Confirmación -->
+        <div id="mensaje-confirmacion" class="mensaje-confirmacion" style="display: none;">
+            ¡Reserva confirmada! ¡Muchas gracias por elegirnos!
+        </div>
+    </section>
+
+    <!-- JavaScript para mostrar el mensaje de confirmación -->
+    <script>
+        function confirmarReserva() {
+            // Obtener los valores de los campos
+            const fecha = document.getElementById('fecha').value;
+            const hora = document.getElementById('hora').value;
+            const personas = document.getElementById('personas').value;
+            const email = document.getElementById('email').value;
+
+            // Validar que todos los campos estén completos
+            if (!fecha) {
+                alert("Por favor, seleccione una fecha para la reserva.");
+                return;
+            }
+            if (!hora) {
+                alert("Por favor, seleccione una hora para la reserva.");
+                return;
+            }
+            if (!personas) {
+                alert("Por favor, seleccione la cantidad de personas.");
+                return;
+            }
+            if (!email) {
+                alert("Por favor, ingrese su email para confirmar la reserva.");
+                return;
+            }
+
+            // Si todos los campos están completos, mostrar el mensaje de confirmación
+            const mensaje = document.getElementById('mensaje-confirmacion');
+            mensaje.style.display = "block";
+        }
+    </script>
+<!-- Pie de página -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Tierra de Granos. Todos los derechos reservados.</p>
+        
+        <!-- Enlaces a Políticas y Contacto -->
+        <div class="footer-links">
+            <a href="#politica-privacidad" class="footer-link">Política de Privacidad</a>
+            <a href="#terminos-servicio" class="footer-link">Términos de Servicio</a>
+            <a href="#contacto" class="footer-link">Contacto</a>
+        </div>
+        
+        <!-- Iconos de Redes Sociales con nombres -->
+        <div class="footer-social">
+            <a href="https://instagram.com/tu_cuenta" target="_blank" aria-label="Instagram" class="social-link">
+                <img src="images/instagram-icon.png" alt="Instagram" class="footer-icon">
+                <span>Instagram</span>
+            </a>
+            <a href="https://facebook.com/tu_cuenta" target="_blank" aria-label="Facebook" class="social-link">
+                <img src="images/facebook-icon.png" alt="Facebook" class="footer-icon">
+                <span>Facebook</span>
+            </a>
+            <a href="https://twitter.com/tu_cuenta" target="_blank" aria-label="Twitter" class="social-link">
+                <img src="images/twitter-icon.png" alt="Twitter" class="footer-icon">
+                <span>Twitter</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
